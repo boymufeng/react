@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="./lib/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    const user={
+        name:"张三",
+        age:18,
+        sex:"男"
+    }
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+    let a = 1;
+    root.render((
+     
+        <div>
+            <div>{[1,2,3,4,5]}</div>
+            <div>{}</div>
+            <div>{}</div>
+        </div>
+   
+    ))
+</script>
+</html>

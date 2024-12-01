@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+    const odiv=React.createElement("div",{className:'wrapper'},  
+     React.createElement('div',{className:'swipper'},
+        React.createElement('h3',{},'我是轮播图'),
+        React.createElement('p',{},'我是文字')),
+    React.createElement('span',{},'我是span'),
+    React.createElement('span',{},'我是也是span'),
+    )
+
+    root.render(odiv)
+</script>
+</html>

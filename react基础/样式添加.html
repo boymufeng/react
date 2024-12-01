@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="./lib/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    /**
+     *  style 的值必须是一个对象
+     *  如果是复合属性，需要用驼峰命名法
+     *  如果是复合属性，值如果是字符串，需要用引号括起来
+     *  如果是复合属性，值如果是数值，不需要用引号括起来
+     *  如果单位为 em，必须写
+     *  如果单位为 rem，必须写
+     *  如果单位为 vw，必须写
+     *  如果单位为 vh，必须写
+     *  如果单位为 vmin，必须写
+     *  如果单位为 vmax，必须写
+     *  如果单位为 pt，必须写
+     *  如果单位为 px，可以省略
+     *  如果单位为 %，必须写
+     *  如果单位为 none，可以省略
+     *  如果单位为 auto，可以省略
+     *  如果单位为 inherit，可以省略
+     *  如果单位为 initial，可以省略
+     *  如果单位为 unset，可以省略
+     *  如果单位为 revert，可以省略
+     *  如果单位为 calc，必须写
+     *  如果单位为 url，必须写
+     *  如果单位为 rgb，必须写
+     *  如果单位为 rgba，必须写
+     *  如果单位为 hsl，必须写
+     *  如果单位为 hsla，必须写
+     *  如果单位为 inherit，可以省略
+     *  如果单位为 initial，可以省略
+     *  如果单位为 unset，可以省略
+     *  如果单位为 revert，可以省略
+     *  如果单位为 calc，必须写
+     */
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+    root.render((
+        <div>
+            <h3>行业样式</h3>
+            <div style={{color:'red',border:'1px solid blue',backgroundColor:'pink'}}>这里是字</div>
+        </div>
+    ))
+</script>
+</html>

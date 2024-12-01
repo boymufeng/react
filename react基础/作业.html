@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="./lib/babel.min.js"></script>
+    <style>
+        .pname {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    const list = [
+        { id: 1, name: 'jack', content: 'rose, you jump i jump', time: '03:21' },
+        { id: 2, name: 'rose', content: 'jack, you see you, one day day', time: '03:22' },
+        { id: 3, name: 'tom', content: 'jack,。。。。。', time: '03:23' }
+    ]
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+    root.render((
+        <div>
+            <ul>
+                
+                {list.map(item => {
+                    return(
+                        <li>
+                            <a href="#">
+                                <h3 style={{fontSize: '25px' }}>姓名：{item.name}</h3>
+                                <p className="pname">评论：{item.content}</p>
+                            </a>
+                        </li>
+                    )
+                })}
+            </ul>
+        </div>
+    ))
+</script>
+
+</html>

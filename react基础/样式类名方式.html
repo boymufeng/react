@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="./lib/babel.min.js"></script>
+    <style>
+        .title{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+    const class1="title";
+    root.render((
+        <div>
+            <h1 className="title">样式类名方式</h1>
+            <h1>插值表达式样式</h1>
+            <div className={class1}></div>
+            <h1>样式是一个数组</h1>
+            
+        </div>
+    ))
+</script>
+</html>

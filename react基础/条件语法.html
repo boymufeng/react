@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="./lib/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+    const flag=false;
+    const age=30
+    const oDiv=(
+        <div>111</div>
+    )
+    function fr(age){
+        if(age<18){
+            return <div>小电影</div>
+        }else if(age>=18&&age<=60){
+            return <div>大电影</div>
+        }else{
+            return <div>老电影</div>
+        }
+    }
+    root.render((
+        <div>
+            <h3>插值表达式</h3>
+            {oDiv}
+            <h3>条件语法</h3>
+            <h3>单分支</h3>
+            {flag&&<div>一起看电影</div>}
+            <h3>双分支</h3>
+            {flag?<div>一起看电影1</div>:<div>一起看电影2</div>}
+            <h3>多分支</h3>
+            {fr()}
+            {fr(15)}
+        </div>
+    ))
+</script>
+</html>
