@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
+    <script src="./lib/babel.min.js"></script>
 </head>
+
 <body>
     <div id="root"></div>
 </body>
-<script>
-    const root= ReactDOM.createRoot(document.querySelector("#root"))
-    const eDiv= React.createElement("div", {id:"aaa",school:'1111'},"我是div")
-    root.render(eDiv)
-    let onBatt= document.createDocumentFragment();//文档碎片创建
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+    root.render((
+        <>
+            <div>111</div>
+            <div>222</div>
+        </>
+    ))
 </script>
+
 </html>
