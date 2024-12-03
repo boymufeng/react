@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,18 +8,24 @@
     <script src="./lib/react-dom.development.js"></script>
     <script src="./lib/babel.min.js"></script>
 </head>
+
 <body>
     <div id="root">
-        <div className="header">我是头部</div>
-        <div className="main">我是内同</div>
-        <div className="footer">我是我是底部</div>
     </div>
 </body>
 <script type="text/babel">
     const root = ReactDOM.createRoot(document.querySelector("#root"));
 
-    class Header extends React.Component{
-        reader(){
+    function Main() {
+     
+            return (
+                <div className="main">我是内同</div>
+            )
+        
+    }
+
+    class Header extends React.Component {
+        render() {
             return (
                 <div className="header">我是头部</div>
             )
@@ -26,7 +33,11 @@
     }
 
     root.render((
-        <div></div>
+        <div>
+            <Header />
+            <Main />
+        </div>
     ))
 </script>
+
 </html>

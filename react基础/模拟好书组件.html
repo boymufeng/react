@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="./lib/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    // const root = ReactDOM.createRoot(document.querySelector("#root"));
+    // root.render((
+    //     <div></div>
+    // ))
+    function Maim(){
+        return (
+            <div>内容</div>
+        )
+    }
+
+    function readen(main,root){
+        console.log(main)
+        const ma= new main.type();
+        let dd=document.createElement(ma.type)
+        dd.innerHTML=ma.props.children
+        root.appendChild(dd);
+        console.log(ma)
+    }
+    const root= document.querySelector('#root')
+    readen(<Maim/>,root)
+</script>
+</html>

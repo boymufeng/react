@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="./lib/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    // const root = ReactDOM.createRoot(document.querySelector("#root"));
+    // root.render((
+    //     <div></div>
+    // ))
+
+    class MyComponent extends React.Component {
+        render() {
+            return (
+                <div>
+                    这里是内容
+                </div>
+            )
+        }
+    }
+    function render(comm, root) {
+        console.log(comm)
+        let inn = new comm.type()//初始化实例
+        let vdom= inn.render()//调用方法 返回标签
+        let dd= document.createElement(vdom.type);
+        dd.innerHTML=vdom.props.children;
+        root.appendChild(dd)
+    }
+    const root = document.querySelector('#root')
+
+    render(<MyComponent />, root)
+
+
+</script>
+
+</html>
