@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './index.css'
 import Item from '../Item/Item'
 
-export default function Main() {
-    return (
-        <ul class="todo-main">
-            <Item />
-        </ul>
-    )
+ class Main extends Component {
+    render() {
+        const { todos } = this.props;
+        return (
+            <ul className="todo-main">
+                {todos.map(todo => (<Item key={todo.id} todo={todo}/>))}
+            </ul>
+        )
+    }
+
 }
+export default Main;

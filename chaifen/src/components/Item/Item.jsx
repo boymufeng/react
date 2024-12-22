@@ -1,14 +1,18 @@
 import './index.css'
-import React from 'react'
+import React, { Component } from 'react'
 
-export default function Item() {
-    return (
-        <li>
-            <label>
-                <input type="checkbox" />
-                <span>xxxxx</span>
-            </label>
-            <button class="btn btn-danger">删除</button>
-        </li>
-    )
+export default class Item extends Component {
+    render(){
+        const {todo}=this.props;
+        return (
+            <li>
+                <label>
+                    <input type="checkbox" checked={todo.isDone} />
+                    <span>{todo.title}</span>
+                </label>
+                <button className="btn btn-danger">删除</button>
+            </li>
+        )
+    }
+    
 }
